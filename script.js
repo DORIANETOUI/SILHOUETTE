@@ -115,28 +115,32 @@ gsap.from(".about-text-box", {
     ease: "power2.out"
 });
 
+
 // Fonctionnalité de retournement de carte
 const modelCards = document.querySelectorAll('.model-card');
+
 modelCards.forEach(card => {
     const flipBtn = card.querySelector('.flip-card-btn');
     const backSide = card.querySelector('.model-card-back');
 
-    // Écouteur pour le bouton "Retourne-moi" (au recto)
+    // Écouteur pour retourner la carte au clic sur le bouton "Retourne-moi"
     if (flipBtn) {
         flipBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Empêche le clic de se propager au conteneur parent
+            e.stopPropagation(); 
             card.classList.add('flipped');
         });
     }
 
-    // Écouteur pour le retour de la carte (au verso)
+    // Écouteur pour revenir à l'image en cliquant sur le verso de la carte
     if (backSide) {
         backSide.addEventListener('click', (e) => {
-            e.stopPropagation(); // Empêche le clic de se propager
+            e.stopPropagation();
             card.classList.remove('flipped');
         });
     }
 });
+
+
 
 // Fonctionnalité du Carrousel
 const carousel = document.querySelector('.models-carousel');
@@ -357,3 +361,4 @@ gsap.from(".contact-form", {
     duration: 1.2,
     ease: "power2.out"
 });
+

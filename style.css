@@ -51,7 +51,7 @@ header {
 .hero-section {
     position: relative;
     /* Image de fond assombrie */
-    background: url('https://images.unsplash.com/photo-1567631643547-67a2dd59f266?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fGRlZmlsZSUyMGRlJTIwbW9kZXxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center/cover;
+    background: url("images/hero.avif") no-repeat center center/cover;
     transform: perspective(1000px) rotateX(0deg);
 }
 
@@ -515,37 +515,19 @@ header {
 }
 
 @media (max-width: 767px) {
-    /* Ajustement du conteneur pour un meilleur espacement sur mobile */
     .about-images-container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
-        position: relative;
+        height: auto;
     }
-
-    /* Réduit le décalage de chaque image */
-    .about-img-1,
-    .about-img-2,
-    .about-img-3 {
-        position: relative;
-        left: auto;
-        top: auto;
-    }
-
-    /* Ajuste la position et la rotation pour un effet plus compact */
-    .about-img-1 {
-        z-index: 1;
-        transform: rotate(-5deg) translateY(0);
-        margin-top: 2rem;
-    }
-    .about-img-2 {
-        z-index: 2;
-        transform: rotate(10deg) translateY(-2rem);
-    }
-    .about-img-3 {
-        z-index: 3;
-        transform: rotate(-8deg) translateY(-4rem); /* Rapproche l'image du haut */
+    
+    .about-images-container img {
+        position: static !important;
+        width: 90% !important;
+        transform: none !important;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
     }
 }
 
@@ -557,5 +539,27 @@ header {
     }
 }
 
+
+@media (max-width: 767px) {
+    #footer .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    #footer .col-lg-3,
+    #footer .col-lg-6 {
+        margin-bottom: 20px;
+    }
+
+    #footer .footer-links {
+        list-style: none;
+        padding: 0;
+    }
+    
+    #footer .footer-links li {
+        margin-bottom: 5px;
+    }
+}
 
 
