@@ -1,0 +1,510 @@
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    overflow-x: hidden;
+}
+
+header{
+    position: relative;
+}
+
+/* Typographie Fantaisiste pour les titres */
+.logo-title, .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+/* Effets de la Navbar */
+header {
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-links-container .nav-link-item {
+    font-size: 1.1rem;
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links-container .nav-link-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-links-container .nav-link-item:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-links-container .nav-link-item:hover {
+    color: #fff;
+}
+
+/* Section Hero */
+.hero-section {
+    position: relative;
+    /* Image de fond assombrie */
+    background: url('https://images.unsplash.com/photo-1567631643547-67a2dd59f266?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fGRlZmlsZSUyMGRlJTIwbW9kZXxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center/cover;
+    transform: perspective(1000px) rotateX(0deg);
+}
+
+.hero-bg-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    transform: perspective(1000px) translateZ(0) scale(1);
+    transition: transform 0.5s ease;
+}
+
+.cta-btn {
+    border: 1px solid #fff;
+    color: #000;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+
+
+/* Section À propos */
+.about-images-container {
+    height: 500px; /* Hauteur fixe pour éviter les problèmes de superposition */
+    position: relative;
+}
+
+.about-images-container img {
+    
+    transform: scale(0.8) rotate(-5deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.about-images-container .about-img-1 {
+    width: 100%;
+    transform: rotate(0deg);
+}
+
+.about-images-container .about-img-2 {
+    bottom: -20px;
+    left: 20px;
+    width: 50%; /* Taille ajustée pour l'effet */
+    transform: scale(0.7) rotate(5deg);
+}
+
+.about-images-container .about-img-3 {
+    top: -20px;
+    right: 20px;
+    width: 45%; /* Taille ajustée pour l'effet */
+    transform: scale(0.75) rotate(-10deg);
+}
+
+/* Effets au survol des images */
+.about-images-container img:hover {
+    transform: scale(1.05) translateY(-5px);
+    filter: brightness(1.2);
+    box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
+    z-index: 5 !important;
+}
+
+.about-text-box {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 2rem;
+    backdrop-filter: blur(5px);
+}
+
+/* Bouton CTA pour la section À propos */
+.about-cta {
+    border: 1px solid #fff;
+    color: #000;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.about-cta:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+
+
+
+/* Section Nos Mannequins */
+.models-title {
+    transform: translateY(-50px);
+}
+
+.models-carousel-container {
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.models-carousel {
+    display: flex;
+    gap: 24px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Masque la barre de défilement */
+.models-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.models-carousel {
+    -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
+    scrollbar-width: none; /* Pour Firefox */
+}
+
+.model-card {
+    flex: 0 0 250px; /* Taille fixe pour une meilleure consistance */
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 1rem;
+    perspective: 1000px;
+    scroll-snap-align: start;
+}
+
+/* Gère la visibilité du bouton sur l'image */
+.model-card-front {
+    position: relative;
+}
+
+.model-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.model-card-front .flip-card-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Ajoute l'animation de pulsation pour le bouton sur mobile */
+.model-card-front .flip-card-btn {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: translateX(-50%) scale(1); }
+    50% { transform: translateX(-50%) scale(1.1); }
+    100% { transform: translateX(-50%) scale(1); }
+}
+
+.model-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.model-card:hover .model-card-inner,
+.model-card.flipped .model-card-inner {
+    transform: rotateY(180deg);
+}
+
+.model-card-front,
+.model-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.model-card-front {
+    background-color: transparent;
+    color: #fff;
+}
+
+.model-card-back {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    transition: all 0.3s ease-in-out;
+    z-index: 10;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-control-prev {
+    left: 10px;
+}
+
+.carousel-control-next {
+    right: 10px;
+}
+
+
+
+
+/* Navigation du carrousel */
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+
+
+
+
+/* Section Galerie */
+.gallery-title {
+    
+    transform: translateY(-50px);
+}
+
+.gallery-container {
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    margin: 5px; /* Réduction de l'espace entre les images */
+    
+    transform: scale(0.8) rotate(5deg);
+    /* Taille ajustée pour 3 ou 4 images par ligne sur grand écran */
+    width: calc(33.333% - 10px); 
+    max-width: 300px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.3);
+}
+
+
+
+/* Section Services */
+.services-title {
+    
+    transform: translateY(-50px);
+}
+
+.service-item {
+    
+    transform: scale(0.9);
+}
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease-in-out, stroke 0.3s ease-in-out;
+}
+
+.service-item .card {
+    transition: all 0.3s ease-in-out;
+}
+
+.service-item:hover {
+    
+   background-color: white;
+}
+
+.service-item .card:hover {
+    background-color:#fff;
+    transform: translateY(-10px);
+
+}
+
+.service-item .card:hover .service-icon {
+    stroke: #000;
+    transform: scale(1.2);
+}
+
+/* Inversion de la couleur du texte au survol (titre et paragraphe) */
+.service-item .card:hover .card-title,
+.service-item .card:hover .card-text {
+    color: #000; /* Le texte devient noir */
+}
+
+/* Inversion de la couleur de l'icône SVG au survol */
+.service-item .card:hover .service-icon {
+    stroke: #000; /* Le trait de l'icône devient noir */
+    transform: scale(1.2);
+}
+
+/* Section Contact */
+.contact-title, .contact-text {
+    
+    transform: translateY(-50px);
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+    stroke: #fff;
+}
+
+.contact-form {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.contact-form .form-control {
+    border-radius: 0;
+    border-color: #fff;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.contact-form .form-control:focus {
+    background-color: transparent !important;
+    border-color: #fff !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25) !important;
+    color: #fff;
+}
+
+.contact-form .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.submit-btn {
+    transition: all 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+/* Pied de Page (Footer) */
+#footer {
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-logo .navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+}
+
+
+.footer-logo a{
+    background-color: #000;
+    color: #fff;
+}
+
+
+.footer-links li a:hover,
+.footer-socials a:hover {
+    color: #a0a0a0 !important;
+    transform: translateY(-10px);
+    transition: all 0.2s ease-in-out;
+}
+
+.footer-socials svg {
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsive pour les mobiles */
+@media (max-width: 768px) {
+    .nav-links-container {
+        display: none;
+    }
+    .hero-title {
+        font-size: 2rem !important;
+    }
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .models-carousel-container {
+        padding: 0 10px;
+    }
+    .model-card {
+        flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        width: calc(50% - 10px); /* Ajustement pour 2 images par ligne sur mobile */
+        max-width: 100%;
+    }
+    
+}
+
+
+

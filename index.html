@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SILHOUETTE - Agence de Mannequins</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black">
+    <header class="position-relative top-0 start-0 w-100 z-1" style="transform: translateY(-100%); opacity: 0;">
+        <nav class="container-fluid py-3 d-flex justify-content-center" aria-label="Navigation principale">
+            <div id="logo-container" class="text-center">
+                <a href="#hero" class="text-white text-decoration-none logo-title" style="font-size: 2.5rem;">SILHOUETTE<span class="visually-hidden"> - Agence de Mannequins</span></a>
+            </div>
+        </nav>
+        <nav class="container-fluid nav-links-container">
+            <ul class="nav justify-content-center" role="menubar">
+                <li class="nav-item" role="none"><a class="nav-link text-white nav-link-item" href="#about" role="menuitem">À propos</a></li>
+                <li class="nav-item" role="none"><a class="nav-link text-white nav-link-item" href="#models" role="menuitem">Mannequins</a></li>
+                <li class="nav-item" role="none"><a class="nav-link text-white nav-link-item" href="#gallery" role="menuitem">Galerie</a></li>
+                <li class="nav-item" role="none"><a class="nav-link text-white nav-link-item" href="#services" role="menuitem">Services</a></li>
+                <li class="nav-item" role="none"><a class="nav-link text-white nav-link-item" href="#contact" role="menuitem">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="vh-100 d-flex flex-column justify-content-center align-items-center text-center text-white overflow-hidden hero-section">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-content">
+                <h1 class="display-1 fw-bold text-uppercase hero-title" style="font-size: clamp(3rem, 10vw, 8rem);">SILHOUETTE</h1>
+                <p class="lead mt-3 slogan" style="opacity: 0;">L'élégance de la ligne, la puissance du caractère. </p>
+                <a href="#contact" class="btn btn-light rounded-0 px-5 py-3 mt-4 cta-btn" style="opacity: 0;">Nous contacter</a>
+            </div>
+        </section>
+
+        <section id="about" class="container py-5 my-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="about-images-container position-relative">
+                        <img src="images/img8.jpg" alt="Portrait en noir et blanc d'un mannequin femme au regard intense." class="img-fluid about-img-1" style="z-index: 1;">
+                        <img src="images/img7.jpg" alt="Mannequin femme en robe de soirée, posant sur le côté." class="img-fluid about-img-2 position-absolute bottom-0 start-0" style="width: 50%; z-index: 3;">
+                        <img src="images/img6.jpg" alt="Vue rapprochée d'une mannequin femme avec un maquillage artistique." class="img-fluid about-img-3 position-absolute top-0 end-0" style="width: 45%; z-index: 2;">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-white p-4 about-text-box">
+                        <h2 class="display-4 fw-bold mb-4 about-title">SILHOUETTE</h2>
+                        <p class="about-text">
+                            Depuis sa création, l'agence SILHOUETTE se consacre à l'art de révéler les talents uniques qui façonnent l'avenir de la mode. Nous ne cherchons pas seulement des visages, mais des personnalités fortes, des créateurs de tendances et des âmes artistiques qui inspirent. Notre philosophie repose sur l'authenticité et l'innovation, créant des ponts entre nos mannequins et les plus grandes maisons de couture.
+                        </p>
+                        <p class="about-text mt-3">
+                            Nous offrons une approche personnalisée, guidant chaque mannequin pour qu'il puisse atteindre son plein potentiel, tout en garantissant à nos clients une collaboration professionnelle et des résultats exceptionnels. SILHOUETTE, c'est l'élégance de la ligne, la puissance du caractère.
+                        </p>
+                        <a href="#services" class="btn btn-light rounded-0 px-5 py-3 mt-4 about-cta">Découvrir nos services</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="models" class="py-5 my-5">
+            <div class="container-fluid text-center">
+                <h2 class="display-3 fw-bold mb-5 models-title">Nos Mannequins</h2>
+                <div class="models-carousel-container position-relative">
+                    <div class="models-carousel">
+                        
+                        <div class="model-card" data-name="Léa Martin">
+                            <div class="model-card-inner">
+                                <div class="model-card-front">
+                                    <img src="images/mannequin.jpg" class="img-fluid rounded-1" alt="Portrait de la mannequin Léa Martin.">
+                                    <button class="btn btn-sm btn-light rounded-pill mt-3 flip-card-btn" aria-label="Afficher les détails de Léa Martin">↻ Retourne-moi</button>
+                                </div>
+                                <div class="model-card-back text-center p-3 rounded-1">
+                                    <h4 class="mt-3 mb-2">Léa Martin</h4>
+                                    <ul class="list-unstyled text-start small mt-3">
+                                        <li><strong>Âge:</strong> 23 ans</li>
+                                        <li><strong>Taille:</strong> 1.78m</li>
+                                        <li><strong>Poids:</strong> 55kg</li>
+                                        <li><strong>Spécialité:</strong> Haute Couture</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="model-card" data-name="Marc Dubois">
+                            <div class="model-card-inner">
+                                <div class="model-card-front">
+                                    <img src="images/mannequin (2).jpg" class="img-fluid rounded-1" alt="Portrait du mannequin Marc Dubois.">
+                                    <button class="btn btn-sm btn-light rounded-pill mt-3 flip-card-btn" aria-label="Afficher les détails de Marc Dubois">↻ Retourne-moi</button>
+                                </div>
+                                <div class="model-card-back text-center p-3 rounded-1">
+                                    <h4 class="mt-3 mb-2">Marc Dubois</h4>
+                                    <ul class="list-unstyled text-start small mt-3">
+                                        <li><strong>Âge:</strong> 26 ans</li>
+                                        <li><strong>Taille:</strong> 1.85m</li>
+                                        <li><strong>Poids:</strong> 78kg</li>
+                                        <li><strong>Spécialité:</strong> Prêt-à-Porter</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="model-card" data-name="Sofia Rossi">
+                            <div class="model-card-inner">
+                                <div class="model-card-front">
+                                    <img src="images/mannequin (3).jpg" class="img-fluid rounded-1" alt="Portrait de la mannequin Sofia Rossi.">
+                                    <button class="btn btn-sm btn-light rounded-pill mt-3 flip-card-btn" aria-label="Afficher les détails de Sofia Rossi">↻ Retourne-moi</button>
+                                </div>
+                                <div class="model-card-back text-center p-3 rounded-1">
+                                    <h4 class="mt-3 mb-2">Sofia Rossi</h4>
+                                    <ul class="list-unstyled text-start small mt-3">
+                                        <li><strong>Âge:</strong> 21 ans</li>
+                                        <li><strong>Taille:</strong> 1.75m</li>
+                                        <li><strong>Poids:</strong> 52kg</li>
+                                        <li><strong>Spécialité:</strong> Commercial</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="model-card" data-name="David Chen">
+                            <div class="model-card-inner">
+                                <div class="model-card-front">
+                                    <img src="images/mannequin (4).jpg" class="img-fluid rounded-1" alt="Portrait du mannequin David Chen.">
+                                    <button class="btn btn-sm btn-light rounded-pill mt-3 flip-card-btn" aria-label="Afficher les détails de David Chen">↻ Retourne-moi</button>
+                                </div>
+                                <div class="model-card-back text-center p-3 rounded-1">
+                                    <h4 class="mt-3 mb-2">David Chen</h4>
+                                    <ul class="list-unstyled text-start small mt-3">
+                                        <li><strong>Âge:</strong> 28 ans</li>
+                                        <li><strong>Taille:</strong> 1.88m</li>
+                                        <li><strong>Poids:</strong> 82kg</li>
+                                        <li><strong>Spécialité:</strong> Éditorial</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="model-card" data-name="Alexandre Moreau">
+                            <div class="model-card-inner">
+                                <div class="model-card-front">
+                                    <img src="images/mannequin (5).jpg" class="img-fluid rounded-1" alt="Portrait du mannequin Alexandre Moreau.">
+                                    <button class="btn btn-sm btn-light rounded-pill mt-3 flip-card-btn" aria-label="Afficher les détails de Alexandre Moreau">↻ Retourne-moi</button>
+                                </div>
+                                <div class="model-card-back text-center p-3 rounded-1">
+                                    <h4 class="mt-3 mb-2">Alexandre Moreau</h4>
+                                    <ul class="list-unstyled text-start small mt-3">
+                                        <li><strong>Âge:</strong> 25 ans</li>
+                                        <li><strong>Taille:</strong> 1.82m</li>
+                                        <li><strong>Poids:</strong> 75kg</li>
+                                        <li><strong>Spécialité:</strong> Défilé</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="model-card" data-name="Chloe Dupont">
+                            <div class="model-card-inner">
+                                <div class="model-card-front">
+                                    <img src="images/mannequin (6).jpg" class="img-fluid rounded-1" alt="Portrait de la mannequin Chloe Dupont.">
+                                    <button class="btn btn-sm btn-light rounded-pill mt-3 flip-card-btn" aria-label="Afficher les détails de Chloe Dupont">↻ Retourne-moi</button>
+                                </div>
+                                <div class="model-card-back text-center p-3 rounded-1">
+                                    <h4 class="mt-3 mb-2">Chloe Dupont</h4>
+                                    <ul class="list-unstyled text-start small mt-3">
+                                        <li><strong>Âge:</strong> 22 ans</li>
+                                        <li><strong>Taille:</strong> 1.77m</li>
+                                        <li><strong>Poids:</strong> 54kg</li>
+                                        <li><strong>Spécialité:</strong> Mode de rue</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="model-card" data-name="Hugo Lefèvre">
+                            <div class="model-card-inner">
+                                <div class="model-card-front">
+                                    <img src="images/mannequin (7).jpg" class="img-fluid rounded-1" alt="Portrait du mannequin Hugo Lefèvre.">
+                                    <button class="btn btn-sm btn-light rounded-pill mt-3 flip-card-btn" aria-label="Afficher les détails de Hugo Lefèvre">↻ Retourne-moi</button>
+                                </div>
+                                <div class="model-card-back text-center p-3 rounded-1">
+                                    <h4 class="mt-3 mb-2">Hugo Lefèvre</h4>
+                                    <ul class="list-unstyled text-start small mt-3">
+                                        <li><strong>Âge:</strong> 29 ans</li>
+                                        <li><strong>Taille:</strong> 1.90m</li>
+                                        <li><strong>Poids:</strong> 85kg</li>
+                                        <li><strong>Spécialité:</strong> Catalogue</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="model-card" data-name="Elise Brunet">
+                            <div class="model-card-inner">
+                                <div class="model-card-front">
+                                    <img src="images/mannequin (2).jpg" class="img-fluid rounded-1" alt="Portrait de la mannequin Elise Brunet.">
+                                    <button class="btn btn-sm btn-light rounded-pill mt-3 flip-card-btn" aria-label="Afficher les détails de Elise Brunet">↻ Retourne-moi</button>
+                                </div>
+                                <div class="model-card-back text-center p-3 rounded-1">
+                                    <h4 class="mt-3 mb-2">Elise Brunet</h4>
+                                    <ul class="list-unstyled text-start small mt-3">
+                                        <li><strong>Âge:</strong> 24 ans</li>
+                                        <li><strong>Taille:</strong> 1.76m</li>
+                                        <li><strong>Poids:</strong> 53kg</li>
+                                        <li><strong>Spécialité:</strong> Influence</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev btn btn-light rounded-circle" type="button" data-direction="prev" aria-label="Mannequin précédent">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next btn btn-light rounded-circle" type="button" data-direction="next" aria-label="Mannequin suivant">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-5 my-5 container text-center">
+            <h2 class="display-3 fw-bold mb-5 gallery-title">SILHOUETTE en Image</h2>
+            <div class="row justify-content-center gallery-container">
+            </div>
+        </section>
+
+        <section id="services" class="container py-5 my-5">
+            <div class="text-center mb-5">
+                <h2 class="display-3 fw-bold services-title">Nos services</h2>
+            </div>
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4 services-container">
+                <div class="col service-item">
+                    <div class="card h-100 bg-transparent border-light rounded-0">
+                        <div class="card-body text-white text-center d-flex flex-column align-items-center justify-content-center">
+                            <svg class="mb-4 service-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase" role="img" aria-label="Icône de porte-documents"><title>Icône de gestion de carrière</title><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                            <h4 class="card-title fw-bold">Gestion de carrière</h4>
+                            <p class="card-text">Nous élaborons des plans de carrière personnalisés pour optimiser le potentiel de chaque mannequin.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col service-item">
+                    <div class="card h-100 bg-transparent border-light rounded-0">
+                        <div class="card-body text-white text-center d-flex flex-column align-items-center justify-content-center">
+                            <svg class="mb-4 service-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-camera" role="img" aria-label="Icône de caméra"><title>Icône de shoots photo et de portfolio</title><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+                            <h4 class="card-title fw-bold">Shoots et portfolio</h4>
+                            <p class="card-text">Nous organisons des séances photo avec des photographes de renom pour un portfolio d'exception.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col service-item">
+                    <div class="card h-100 bg-transparent border-light rounded-0">
+                        <div class="card-body text-white text-center d-flex flex-column align-items-center justify-content-center">
+                            <svg class="mb-4 service-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe" role="img" aria-label="Icône de globe terrestre"><title>Icône de visibilité internationale</title><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                            <h4 class="card-title fw-bold">Visibilité internationale</h4>
+                            <p class="card-text">Nous gérons les relations avec des partenaires internationaux pour maximiser la visibilité de nos talents.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col service-item">
+                    <div class="card h-100 bg-transparent border-light rounded-0">
+                        <div class="card-body text-white text-center d-flex flex-column align-items-center justify-content-center">
+                            <svg class="mb-4 service-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3" role="img" aria-label="Icône de crayon pour la négociation"><title>Icône de contrats et négociations</title><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                            <h4 class="card-title fw-bold">Contrats et négociations</h4>
+                            <p class="card-text">Notre équipe juridique et de négociation assure des contrats équitables et avantageux pour nos mannequins.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col service-item">
+                    <div class="card h-100 bg-transparent border-light rounded-0">
+                        <div class="card-body text-white text-center d-flex flex-column align-items-center justify-content-center">
+                            <svg class="mb-4 service-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star" role="img" aria-label="Icône d'étoile pour la marque"><title>Icône de promotion et d'image de marque</title><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <h4 class="card-title fw-bold">Promotion et image de marque</h4>
+                            <p class="card-text">Nous aidons à construire une image de marque forte pour chaque talent, le positionnant comme une icône unique.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col service-item">
+                    <div class="card h-100 bg-transparent border-light rounded-0">
+                        <div class="card-body text-white text-center d-flex flex-column align-items-center justify-content-center">
+                            <svg class="mb-4 service-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile" role="img" aria-label="Icône de visage souriant"><title>Icône de bien-être et suivi</title><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                            <h4 class="card-title fw-bold">Bien-être et suivi</h4>
+                            <p class="card-text">Nous veillons à la santé et au bien-être de nos mannequins avec un suivi régulier et un soutien constant.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="container py-5 my-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 text-white">
+                    <h2 class="display-3 fw-bold mb-4 contact-title">Nous contacter</h2>
+                    <p class="lead contact-text">
+                        L'élégance se trouve dans les détails. Contactez-nous pour toute collaboration, demande de casting ou simple question. Notre équipe est prête à vous accueillir et à échanger sur votre projet.
+                    </p>
+                    <ul class="list-unstyled mt-5">
+                        <li class="d-flex align-items-center mb-3">
+                            <svg class="me-3 contact-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Icône de carte postale"><title>Adresse</title><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <address class="m-0">123 Rue de la Mode, Paris, France</address>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                            <svg class="me-3 contact-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Icône de téléphone"><title>Numéro de téléphone</title><path d="M22 16.92v3a2 2 0 0 1-2 2A20.52 20.52 0 0 1 12 14.5a20.52 20.52 0 0 1-8-8a2 2 0 0 1 2-2h3l3.5 3.5a1 1 0 0 1 0 1.41l-2.12 2.12a1 1 0 0 0 0 1.41l3.54 3.54a1 1 0 0 0 1.41 0l2.12-2.12a1 1 0 0 1 1.41 0L22 16.92z"/></svg>
+                            <a href="tel:+33123456789" class="text-white text-decoration-none">+33 1 23 45 67 89</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <svg class="me-3 contact-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Icône d'enveloppe pour email"><title>Adresse e-mail</title><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <a href="mailto:contact@silhouette.com" class="text-white text-decoration-none">contact@silhouette.com</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-6">
+                    <form class="contact-form p-4">
+                        <div class="mb-3">
+                            <label for="name" class="visually-hidden">Votre nom</label>
+                            <input type="text" class="form-control form-control-lg bg-transparent border-light text-white" id="name" placeholder="Votre nom" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="visually-hidden">Votre email</label>
+                            <input type="email" class="form-control form-control-lg bg-transparent border-light text-white" id="email" placeholder="Votre email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="visually-hidden">Votre message</label>
+                            <textarea class="form-control bg-transparent border-light text-white" id="message" rows="5" placeholder="Votre message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-light rounded-0 w-100 py-3 submit-btn">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="py-5 text-black">
+        <div class="container text-center">
+            <div class="footer-logo mb-4">
+                <a class="navbar-brand text-black fw-bold d-block mx-auto mb-3" href="#">
+                    <span style="letter-spacing: 0.5rem; font-family: 'Playfair Display', serif;">SILHOUETTE</span>
+                    <span class="visually-hidden"> - Retour à l'accueil</span>
+                </a>
+                <p class="small text-muted m-0">L'agence qui révèle votre élégance</p>
+            </div>
+
+            <div class="footer-links mb-4">
+                <ul class="list-unstyled d-flex justify-content-center m-0" aria-label="Liens de navigation en pied de page">
+                    <li class="mx-3"><a href="#hero" class="text-black text-decoration-none small">Accueil</a></li>
+                    <li class="mx-3"><a href="#about" class="text-black text-decoration-none small">À propos</a></li>
+                    <li class="mx-3"><a href="#models" class="text-black text-decoration-none small">Mannequins</a></li>
+                    <li class="mx-3"><a href="#gallery" class="text-black text-decoration-none small">Galerie</a></li>
+                    <li class="mx-3"><a href="#services" class="text-black text-decoration-none small">Services</a></li>
+                    <li class="mx-3"><a href="#contact" class="text-black text-decoration-none small">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-socials mb-4">
+                <a href="#" class="text-black mx-2" aria-label="Lien vers notre compte Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram" role="img"><title>Instagram</title><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="#" class="text-black mx-2" aria-label="Lien vers notre compte Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter" role="img"><title>Twitter</title><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22 5a9.09 9.09 0 0 1-3.87.5 4.5 4.5 0 0 0-7.66 4.96A13.26 13.26 0 0 1 2 2a4.48 4.48 0 0 0 1.05 5.24c-.2-.01-.4-.01-.6-.02a4.5 4.5 0 0 0 1.8 4.6l-.01.01a4.5 4.5 0 0 0 2.22 1.58A4.48 4.48 0 0 1 2 11.5a4.48 4.48 0 0 0 .52 2.21A13.26 13.26 0 0 0 23 3z"></path></svg>
+                </a>
+                <a href="#" class="text-black mx-2" aria-label="Lien vers notre compte LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin" role="img"><title>LinkedIn</title><path d="M16 8a6 6 0 0 0-6 6v7h-4V14a6 6 0 0 1 6-6h4z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+            </div>
+
+            <p class="small mb-0 text-muted">&copy; 2024 SILHOUETTE. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
