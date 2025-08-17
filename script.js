@@ -1,27 +1,21 @@
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.registerPlugin(ScrollTrigger);
+
 document.addEventListener('DOMContentLoaded', () => {
     // GSAP Timeline pour l'animation initiale
     const tl = gsap.timeline();
 
-    // Apparition du logo et de la nav (Profondeur + Fade)
-    tl.to('header', {
+    // Apparition du header et des liens de nav
+    tl.fromTo('header', {
+        opacity: 0,
+        y: -100
+    }, {
         opacity: 1,
         y: 0,
         duration: 1.5,
         ease: "power2.out"
     })
-    .fromTo('#logo-container', {
-        opacity: 0,
-        scale: 0.8,
-        filter: 'blur(5px)'
-    }, {
-        opacity: 1,
-        scale: 1,
-        filter: 'blur(0px)',
-        duration: 1.5,
-        ease: "power2.out"
-    }, '<')
     .fromTo('.nav-link-item', {
         opacity: 0,
         y: 20
@@ -124,16 +118,21 @@ gsap.from(".about-text-box", {
 // Fonctionnalité de retournement de carte
 const modelCards = document.querySelectorAll('.model-card');
 modelCards.forEach(card => {
-    // Écouteur pour retourner la carte au clic
-    card.addEventListener('click', () => {
-        card.classList.toggle('flipped');
-    });
+    const flipBtn = card.querySelector('.flip-card-btn');
+    const backSide = card.querySelector('.model-card-back');
 
-    // Option : écouteur pour le bouton "Retourne-moi"
-    const backBtn = card.querySelector('.flip-back-btn');
-    if (backBtn) {
-        backBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); // Empêche l'événement de se propager à la carte
+    // Écouteur pour le bouton "Retourne-moi" (au recto)
+    if (flipBtn) {
+        flipBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Empêche le clic de se propager au conteneur parent
+            card.classList.add('flipped');
+        });
+    }
+
+    // Écouteur pour le retour de la carte (au verso)
+    if (backSide) {
+        backSide.addEventListener('click', (e) => {
+            e.stopPropagation(); // Empêche le clic de se propager
             card.classList.remove('flipped');
         });
     }

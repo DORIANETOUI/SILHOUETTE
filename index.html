@@ -11,21 +11,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-black">
-    <header class="position-relative top-0 start-0 w-100 z-1" style="transform: translateY(-100%); opacity: 0;">
-        <nav class="container-fluid py-3 d-flex justify-content-center" aria-label="Navigation principale">
-            <div id="logo-container" class="text-center">
-                <a href="#hero" class="text-white text-decoration-none logo-title" style="font-size: 2.5rem;">SILHOUETTE<span class="visually-hidden"> - Agence de Mannequins</span></a>
+    <header class="position-absolute top-0 start-0 w-100 z-1" style="transform: translateY(-100%); opacity: 0;">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav nav-links-container">
+                    <li class="nav-item">
+                        <a class="nav-link text-white nav-link-item" href="#about">À propos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white nav-link-item" href="#models">Mannequins</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white nav-link-item" href="#gallery">Galerie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white nav-link-item" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white nav-link-item" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-        <nav class="container-fluid nav-links-container">
-            <ul class="nav justify-content-center" role="menubar">
-                <li class="nav-item" role="none"><a class="nav-link text-white nav-link-item" href="#about" role="menuitem">À propos</a></li>
-                <li class="nav-item" role="none"><a class="nav-link text-white nav-link-item" href="#models" role="menuitem">Mannequins</a></li>
-                <li class="nav-item" role="none"><a class="nav-link text-white nav-link-item" href="#gallery" role="menuitem">Galerie</a></li>
-                <li class="nav-item" role="none"><a class="nav-link text-white nav-link-item" href="#services" role="menuitem">Services</a></li>
-                <li class="nav-item" role="none"><a class="nav-link text-white nav-link-item" href="#contact" role="menuitem">Contact</a></li>
-            </ul>
-        </nav>
+        </div>
+    </nav>
     </header>
 
     <main>
@@ -343,40 +356,39 @@
     </main>
 
     <footer id="footer" class="py-5 text-black">
-        <div class="container text-center">
-            <div class="footer-logo mb-4">
-                <a class="navbar-brand text-black fw-bold d-block mx-auto mb-3" href="#">
-                    <span style="letter-spacing: 0.5rem; font-family: 'Playfair Display', serif;">SILHOUETTE</span>
-                    <span class="visually-hidden"> - Retour à l'accueil</span>
-                </a>
-                <p class="small text-muted m-0">L'agence qui révèle votre élégance</p>
-            </div>
-
-            <div class="footer-links mb-4">
-                <ul class="list-unstyled d-flex justify-content-center m-0" aria-label="Liens de navigation en pied de page">
-                    <li class="mx-3"><a href="#hero" class="text-black text-decoration-none small">Accueil</a></li>
-                    <li class="mx-3"><a href="#about" class="text-black text-decoration-none small">À propos</a></li>
-                    <li class="mx-3"><a href="#models" class="text-black text-decoration-none small">Mannequins</a></li>
-                    <li class="mx-3"><a href="#gallery" class="text-black text-decoration-none small">Galerie</a></li>
-                    <li class="mx-3"><a href="#services" class="text-black text-decoration-none small">Services</a></li>
-                    <li class="mx-3"><a href="#contact" class="text-black text-decoration-none small">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-socials mb-4">
-                <a href="#" class="text-black mx-2" aria-label="Lien vers notre compte Instagram">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram" role="img"><title>Instagram</title><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                </a>
-                <a href="#" class="text-black mx-2" aria-label="Lien vers notre compte Twitter">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter" role="img"><title>Twitter</title><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22 5a9.09 9.09 0 0 1-3.87.5 4.5 4.5 0 0 0-7.66 4.96A13.26 13.26 0 0 1 2 2a4.48 4.48 0 0 0 1.05 5.24c-.2-.01-.4-.01-.6-.02a4.5 4.5 0 0 0 1.8 4.6l-.01.01a4.5 4.5 0 0 0 2.22 1.58A4.48 4.48 0 0 1 2 11.5a4.48 4.48 0 0 0 .52 2.21A13.26 13.26 0 0 0 23 3z"></path></svg>
-                </a>
-                <a href="#" class="text-black mx-2" aria-label="Lien vers notre compte LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin" role="img"><title>LinkedIn</title><path d="M16 8a6 6 0 0 0-6 6v7h-4V14a6 6 0 0 1 6-6h4z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                </a>
-            </div>
-
-            <p class="small mb-0 text-muted">&copy; 2024 SILHOUETTE. Tous droits réservés.</p>
+    <div class="container text-center">
+        <div class="footer-logo mb-4">
+            <a class="navbar-brand text-black fw-bold d-block mx-auto mb-3" href="#">
+                <span style="letter-spacing: 0.5rem; font-family: 'Playfair Display', serif;">SILHOUETTE</span>
+            </a>
+            <p class="small text-muted m-0">L'agence qui révèle votre élégance</p>
         </div>
+
+        <div class="footer-links **my-4**">
+            <ul class="list-unstyled d-flex justify-content-center m-0" aria-label="Liens de navigation en pied de page">
+                <li class="mx-3"><a href="#hero" class="text-black text-decoration-none small">Accueil</a></li>
+                <li class="mx-3"><a href="#about" class="text-black text-decoration-none small">À propos</a></li>
+                <li class="mx-3"><a href="#models" class="text-black text-decoration-none small">Mannequins</a></li>
+                <li class="mx-3"><a href="#gallery" class="text-black text-decoration-none small">Galerie</a></li>
+                <li class="mx-3"><a href="#services" class="text-black text-decoration-none small">Services</a></li>
+                <li class="mx-3"><a href="#contact" class="text-black text-decoration-none small">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-socials **my-4**">
+            <a href="#" class="text-black mx-2" aria-label="Lien vers notre compte Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram" role="img"><title>Instagram</title><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="text-black mx-2" aria-label="Lien vers notre compte Twitter">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter" role="img"><title>Twitter</title><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22 5a9.09 9.09 0 0 1-3.87.5 4.5 4.5 0 0 0-7.66 4.96A13.26 13.26 0 0 1 2 2a4.48 4.48 0 0 0 1.05 5.24c-.2-.01-.4-.01-.6-.02a4.5 4.5 0 0 0 1.8 4.6l-.01.01a4.5 4.5 0 0 0 2.22 1.58A4.48 4.48 0 0 1 2 11.5a4.48 4.48 0 0 0 .52 2.21A13.26 13.26 0 0 1 23 3z"></path></svg>
+            </a>
+            <a href="#" class="text-black mx-2" aria-label="Lien vers notre compte LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin" role="img"><title>LinkedIn</title><path d="M16 8a6 6 0 0 0-6 6v7h-4V14a6 6 0 0 1 6-6h4z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+        </div>
+
+        <p class="small mb-0 text-muted">&copy; 2024 SILHOUETTE. Tous droits réservés.</p>
+    </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
