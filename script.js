@@ -121,9 +121,6 @@ gsap.from(".about-text-box", {
     ease: "power2.out"
 });
 
-
-
-
 // Fonctionnalité de retournement de carte
 const modelCards = document.querySelectorAll('.model-card');
 modelCards.forEach(card => {
@@ -141,9 +138,6 @@ modelCards.forEach(card => {
         });
     }
 });
-
-
-
 
 // Fonctionnalité du Carrousel
 const carousel = document.querySelector('.models-carousel');
@@ -208,9 +202,6 @@ gsap.from(".model-card", {
     ease: "power2.out"
 });
 
-
-
-
 // Données pour la galerie
 const galleryImages = [
     { src: 'images/img3.jpg', rotation: 'rotate(-5deg)' },
@@ -237,7 +228,8 @@ function createGallery() {
         item.style.transform = imgData.rotation;
 
         const img = document.createElement('img');
-        img.src = imgData.src;
+        // MODIFICATION : On utilise data-src au lieu de src
+        img.setAttribute('data-src', imgData.src);
         img.alt = 'Image de la galerie';
 
         item.appendChild(img);
@@ -274,9 +266,33 @@ document.addEventListener('DOMContentLoaded', () => {
         duration: 1.2,
         ease: 'power2.out'
     });
+    
+    // NOUVEAU : Implementation du Lazy Loading avec Intersection Observer
+    // ---
+    const galleryItems = document.querySelectorAll('.gallery-item img');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                const src = img.getAttribute('data-src');
+                if (src) {
+                    img.src = src; // Charge l'image
+                    img.removeAttribute('data-src'); // Nettoie l'attribut
+                    observer.unobserve(img); // Arrête d'observer l'image
+                }
+            }
+        });
+    }, {
+        rootMargin: '0px 0px 50px 0px', // Charge l'image 50px avant qu'elle entre dans le viewport
+        threshold: 0.01 // Déclenche l'événement dès que 1% de l'élément est visible
+    });
+
+    galleryItems.forEach(img => {
+        observer.observe(img);
+    });
+    // ---
 });
-
-
 
 // Animation de la section "Services"
 gsap.from(".services-title", {
