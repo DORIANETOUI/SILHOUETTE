@@ -118,26 +118,15 @@ gsap.from(".about-text-box", {
 
 // Fonctionnalité de retournement de carte
 const modelCards = document.querySelectorAll('.model-card');
-
 modelCards.forEach(card => {
-    const flipBtn = card.querySelector('.flip-card-btn');
-    const backSide = card.querySelector('.model-card-back');
-
-    // Écouteur pour retourner la carte au clic sur le bouton "Retourne-moi"
-    if (flipBtn) {
-        flipBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); 
-            card.classList.add('flipped');
-        });
-    }
-
-    // Écouteur pour revenir à l'image en cliquant sur le verso de la carte
-    if (backSide) {
-        backSide.addEventListener('click', (e) => {
+    // Écouteur sur la carte entière pour gérer le clic sur mobile
+    card.addEventListener('click', (e) => {
+        // Empêche la propagation si l'on clique sur un élément interactif à l'intérieur
+        if (e.target.closest('.flip-card-btn')) {
             e.stopPropagation();
-            card.classList.remove('flipped');
-        });
-    }
+        }
+        card.classList.toggle('flipped');
+    });
 });
 
 
@@ -169,15 +158,7 @@ nextBtn.addEventListener('click', () => {
     scrollCarousel('next');
 });
 
-// Écouteur pour le bouton "Retourne-moi"
-const flipBtns = document.querySelectorAll('.flip-card-btn');
-flipBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        e.stopPropagation(); // Empêche l'événement de se propager au conteneur de la carte
-        const card = btn.closest('.model-card');
-        card.classList.toggle('flipped');
-    });
-});
+
 
 // Animation GSAP pour l'apparition des éléments
 gsap.from(".models-title", {
@@ -361,4 +342,3 @@ gsap.from(".contact-form", {
     duration: 1.2,
     ease: "power2.out"
 });
-

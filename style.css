@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+
 body {
     background-color: #000;
     color: #fff;
@@ -482,18 +485,27 @@ header {
 
 
 
-
-
-
-
 /* Responsive pour les mobiles */
 @media (max-width: 768px) {
-    .nav-links-container {
-        display: none;
-    }
+    
     .hero-title {
         font-size: 2rem !important;
     }
+
+    #hero {
+    position: relative;
+    /* Image de fond assombrie */
+    background: url("images/hero.avif") ;
+    transform: perspective(1000px) rotateX(0deg);
+    background-size: cover; /* L'image s'agrandit pour couvrir tout le conteneur */
+    background-position: center; /* Centre l'image pour un meilleur affichage */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    height: 70vh; /* Ajuste la hauteur de la section à 70% de la hauteur de l'écran, ce qui est une bonne pratique sur mobile */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 }
 
 /* responsive */
@@ -516,18 +528,36 @@ header {
 
 @media (max-width: 767px) {
     .about-images-container {
-        display: flex;
-        flex-direction: column;
+        position: relative; /* Conserve le positionnement pour les images */
+        height: auto; /* Supprime la hauteur fixe */
+        padding: 50px 0; /* Ajoute un espace au-dessus et en dessous */
+        margin-top: 50px; /* Ajoute une marge au-dessus pour éloigner du Hero */
+        margin-bottom: 50px;
+        display: flex; /* Assure le bon alignement */
+        justify-content: center;
         align-items: center;
-        height: auto;
     }
     
     .about-images-container img {
-        position: static !important;
-        width: 90% !important;
-        transform: none !important;
-        margin-bottom: 20px;
-        box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+        position: absolute; /* Maintient le positionnement absolu pour la superposition */
+        width: 75% !important; 
+        max-width: none;
+    }
+    
+    /* Les règles de z-index et de rotation restent les mêmes */
+    .about-img-1 {
+        transform: translate(-50%, -50%) rotate(-5deg);
+        z-index: 3;
+    }
+    .about-img-2 {
+        transform: translate(-50%, -50%) rotate(5deg);
+        z-index: 2;
+        opacity: 0.8;
+    }
+    .about-img-3 {
+        transform: translate(-50%, -50%) rotate(-10deg);
+        z-index: 1;
+        opacity: 0.6;
     }
 }
 
@@ -560,6 +590,14 @@ header {
     #footer .footer-links li {
         margin-bottom: 5px;
     }
+
+    #footer .footer-links ul {
+        flex-direction: column;
+        align-items: center; /* Pour centrer les éléments verticalement */
+        gap: 10px; /* Ajoute de l'espace entre les liens */
+    }
+    
+    #footer .footer-links li {
+        margin: 0 !important; /* Annule la marge horizontale */
+    }
 }
-
-
